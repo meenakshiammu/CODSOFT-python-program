@@ -1,0 +1,39 @@
+import random 
+print("Welcome to Rock, Paper, Scissors!\n")
+user_wins = 0 
+computer_wins = 0 
+while True: 
+    user = input("Enter a choice (rock,paper,scissors): ") 
+    choices = ["rock","paper","scissors"] 
+    computer = random.choice(choices) 
+    print("\nYour choice:",user)
+    print("computers choice:",computer)
+    if user == computer: 
+        print("It is a tie!!!") 
+    elif user == "rock": 
+        if computer == "scissors": 
+            print("Rock smashes scissors. You win!") 
+            user_wins+=1 
+        else: 
+            print("Paper covers rock. You lose.") 
+            computer_wins+=1 
+    elif user == "paper": 
+        if computer == "rock": 
+            print("Paper covers rock. You win!") 
+            user_wins+=1 
+        else: 
+            print("Scissors cuts paper. You lose.") 
+            computer_wins+=1 
+    elif user == "scissors": 
+        if computer == "paper": 
+            print("Scissors cuts paper. You win!") 
+            user_wins+=1 
+        else: 
+            print("Rock smashes scissors. You lose.")
+            computer_wins+=1 
+    print("You have "+str(user_wins)+" wins") 
+    print("The computer has "+str(computer_wins)+" wins") 
+    repeat = input("\nPlay again? (yes/no): ") 
+    if repeat != "yes": 
+        print("Thanks for playing!") 
+        break 

@@ -1,0 +1,50 @@
+#calculator
+
+import math
+def add(num_1,num_2):
+    return num_1 + num_2
+
+def subtract(num_1,num2):
+    return num_1 - num_2
+
+def multiply(num_1,num_2):
+    return num_1 * num_2
+
+def divide(num_1,num_2):
+    return num_1 / num_2
+
+def powerof(num_1,num_2):
+    return num_1 ** num_2
+
+def mod(num_1,num_2):
+    return num_1 % num_2
+
+def sqrt(num_1):
+    return math.sqrt(num_1)
+
+while True:
+    num_1=int(input("enter the first number: "))
+    num_2=int(input("enter the second number: "))
+
+    print(" enter your choice:\n 1.add\n 2.subtract\n 3.multiply\n 4.divide\n 5.powerof\n 6.reminder\n 7.squareroot\n ")
+    choice = int(input("select one from above operations 1,2,3,4,5,6,7: "))
+
+    if(choice == 1):
+        print(num_1,"+",num_2,"=",add(num_1,num_2))
+    elif(choice == 2):
+        print(num_1,"-",num_2,"=",subtract(num_1,num_2))
+    elif(choice == 3):
+        print(num_1,"*",num_2,"=",multiply(num_1,num_2))
+    elif(choice == 4):
+        if num_2 == 0:
+            print('Infinity')
+        else:
+            print(num_1,"/",num_2,"=",divide(num_1,num_2))
+    elif(choice == 5):
+        print(num_1,"**",num_2,"=",powerof(num_1,num_2))
+    elif(choice == 6):
+        print(num_1,"%",num_2,"=",mod(num_1,num_2))
+    elif(choice == 7):
+        print("squareroot of ",num_1,"=",sqrt(num_1))
+    else:
+        break
